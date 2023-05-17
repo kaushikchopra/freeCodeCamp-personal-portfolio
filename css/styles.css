@@ -1,0 +1,264 @@
+:root {
+    --bright-cyan: #00ADB5;
+    --light-red: #EEEEEE;
+    --dark-grayish-blue: #222831;
+    --main-gray: #393E46;
+}
+
+/* CSS RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4.2rem;
+}
+
+h1, h2 {
+    font-family: Raleway, sans-serif;
+    text-align: center;
+}
+
+p {
+    font-size: 4rem;
+    font-weight: 200;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--light-red);
+}
+
+/* HEADER - NAVBAR */
+
+#navbar {
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--bright-cyan);
+    display: flex;
+    justify-content: flex-end;
+}
+
+#navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    margin-right: 2rem;
+}
+
+.nav-link {
+    margin: auto;
+}
+
+.nav-link a {
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: var(--light-red);
+    padding: 20px;
+}
+
+.nav-link > a:hover {
+    background-color: #302727;
+    transition: all 0.3s linear;
+}
+
+/* ABOUT PAGE */
+
+#welcome-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(70deg, #73757c 0%, #1B1A1C 100%);
+    color: var(--light-red);
+}
+
+#welcome-section > p {
+    font-style: italic;
+    color: var(--bright-cyan);
+}
+
+/* PROJECTS */
+
+.projects-section {
+    text-align: center;
+    padding: 10rem 2rem;
+    background-color: var(--light-red);
+}
+
+.projects-section-header {
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    color: var(--dark-grayish-blue);
+    border-bottom: 0.2rem solid var(--dark-grayish-blue);
+}
+
+.projects-section .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 10rem;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+.projects-section .projects-grid .project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+}
+
+.projects-section .projects-grid .project-title {
+    font-size: 2.5rem;
+    padding: 2rem 0.5rem;
+}
+
+/* PROJECT BOXES */
+.projects-section .projects-grid .project {
+    background: var(--dark-grayish-blue);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+}
+
+/* CONTACT SECTION */
+
+.contact-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(70deg, #111212 0%, #77747a 100%);
+    color: var(--light-red);
+}
+
+.contact-section > h2 {
+    font-size: 5rem;
+}
+
+.contact-section > p {
+    font-size: 2rem;
+    font-style: italic;
+    margin-top: 1.5rem;
+}
+
+.contact-section .contact-icons {
+    font-size: 2.4rem;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+}
+
+.btn:hover {
+    transform: scale(1.5);
+    transition: all 0.3s linear;
+}
+
+
+/* TABLET AND SMARTPHONE */
+
+@media (max-width: 760px) {
+    
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 2rem;
+        font-weight: 200;
+    }
+    
+    #navbar {
+        justify-content: center;
+        height: 10vh;
+    }
+
+    #navbar ul {
+        margin: 0;
+    }
+
+    #welcome-section > p {
+        margin-top: 1.5rem;
+    }
+
+    .nav-link a {
+        font-size: 2rem;
+    }
+
+    .nav-link > a:hover {
+        background-color: #302727;
+    }
+
+    .projects-section .projects-grid .project-title {
+        font-size: 2rem;
+        padding: 2rem 0.5rem;
+    }
+
+    .projects-section .projects-grid {
+        grid-gap: 4rem;
+    }
+
+    .contact-section > h2 {
+        font-size: 3rem;
+    }
+
+    .contact-section .contact-icons {
+        font-size: 1.75rem;
+    }
+
+    .contact-list {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-top: 4rem;
+    }
+}
